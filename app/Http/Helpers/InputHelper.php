@@ -15,18 +15,30 @@ class InputHelper
      * @param $function
      * @return JsonResponse
      */
-    public static function inputChecker($request,$items,$function)
+    public static function inputChecker($request, $items, $function)
     {
         try {
-            if (ArrayHelper::arrayIsset($items)) {
+            if (!empty($items)) {
+
+                if (ArrayHelper::arrayIsset($items)) {
+
+                    $function($request);
+
+                } else {
+
+                    ResponseHelper::jsonResponse(null, Response::HTTP_BAD_REQUEST, config('messages.fail'))->send();
+
+                }
+
+            } else {
 
                 $function($request);
 
-            } else {
-                ResponseHelper::jsonResponse(null, Response::HTTP_BAD_REQUEST, config('messages.fail'))->send();
             }
         } catch (\Exception $exception) {
+
             ResponseHelper::jsonResponse($exception->getMessage(), Response::HTTP_INTERNAL_SERVER_ERROR, null)->send();
+
         }
     }
 

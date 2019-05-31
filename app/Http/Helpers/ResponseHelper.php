@@ -5,8 +5,6 @@ namespace App\Http\Helpers;
 
 
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class ResponseHelper
 {

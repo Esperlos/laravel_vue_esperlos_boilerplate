@@ -61,7 +61,6 @@ class ExampleAppController extends Controller
         InputHelper::inputChecker(
             $request,
             [
-                $request->User()->id,
                 $request->field_one,
                 $request->field_two
             ],
@@ -84,9 +83,7 @@ class ExampleAppController extends Controller
     {
         InputHelper::inputChecker(
             $request,
-            [
-                $request->User()->id
-            ],
+            null,
             function (Request $request) {
 
                 $example=Example::getExample($request->User()->id);
