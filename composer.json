@@ -1,10 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "Esperlos/laravel_esperlos_boilerplate",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "A boilerplate for laravel designed to use laravel as backend and vue as frontend plus some improvements.",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "boilerplate",
+        "vue"
     ],
     "license": "MIT",
     "require": {
