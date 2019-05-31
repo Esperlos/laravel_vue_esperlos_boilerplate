@@ -77,7 +77,7 @@ default example routes for api:
 
 http://localhost:8000/api/v1/example/create-example-user
 
-body:
+Body:
 ```json
 {
 	"field_one":"Hello",
@@ -87,7 +87,7 @@ body:
 
 http://localhost:8000/api/v1/example/edit-example-profile
 
-body:
+Body:
 
 ```json
 {
@@ -101,7 +101,7 @@ body:
 http://localhost:8000/api/v1/example/get-example
 
 
-body:
+Body:
 
 
 ```json
@@ -116,7 +116,7 @@ body:
 http://localhost:8000/api/v1/example/get-examples-list
 
 
-body:
+Body:
 
 
 ```json
@@ -126,13 +126,88 @@ body:
 }
 ```
 
+# InputHelper
+
+This helper checks for valid input from user
+
+Import:
+```php
+use App\Http\Helpers\InputHelper;
+```
+Usage:
+```php
+InputHelper::inputChecker(
+    $request,
+    [
+        $request->field_one,
+        $request->field_two,
+        // All fields that you need to check
+    ],
+    function (Request $request) {
+        // Input is correct do something
+    }
+);
+```
+If you don't need to check any fields:
+
+```php
+InputHelper::inputChecker(
+    $request,
+    null,
+    function (Request $request) {
+        // Do something
+    }
+);
+```
+
+#ResponseHelper
+
+This helper helps you to provide an integrated json response for all apis
+
+First parameter is error message, if you don't have any errors you can set null value for it.
+Second parameter is Http Response code.
+Last parameter is data that you want send to user. it can be an array or object or even a string.
+
+Import:
+```php
+use App\Http\Helpers\ResponseHelper;
+```
+Usage:
+```php
+ResponseHelper::jsonResponse(null, Response::HTTP_OK, config('messages.success'))->send();
+```
+Sample Output:
+```json
+{
+    "errors": null,
+    "status": 200,
+    "data": [
+        {
+            "id": 2,
+            "api_token": "FeDsHsoDjJZXd2gxl7c80WxYjobMB0ptzP3FZn5cU2wq4KIR21Y4qtssGoPx",
+            "field_one": "Hello",
+            "field_two": "Word",
+            "created_at": "2019-05-31 12:25:11",
+            "updated_at": "2019-05-31 12:25:11"
+        },
+        {
+            "id": 1,
+            "api_token": "FLH7CMhUiDN54OkjFBxN1CeWnXIgjsJY36Gz3lCy7IEia81MO5lG9UW7efGK",
+            "field_one": "Hello",
+            "field_two": "Sajjad",
+            "created_at": "2019-05-31 12:24:43",
+            "updated_at": "2019-05-31 12:43:58"
+        }
+    ]
+}
+```
 # CedarMapHelper
 
-import:
+Import:
 ```php
 use App\Http\Helpers\CedarMapHelper;
 ```
-usage:
+Usage:
 ```php
 $directionsData = CedarMapHelper::getDirectionsData(
     (object) ['latitude' => $request->get('start_lat'), 'longitude' => $request->get('start_lng')],
@@ -142,21 +217,22 @@ $directionsData = CedarMapHelper::getDirectionsData(
 
 # FirebaseHelper
 
-import:
+Import:
 ```php
 use App\Http\Helpers\FirebaseHelper;
 ```
-usage:
+Usage:
 ```php
 FirebaseHelper::sendFcmNotificationMessage($pushTokenArray, $data, 'Text');
 ```
 # SmsPanelHelper
 
-import:
+Import:
 ```php
 use App\Http\Helpers\SmsPanelHelper;
 ```
-usage:
+Usage:
 ```php
 SmsPanelHelper::sendSms($phoneNumber), $tempCode);
 ```
+
