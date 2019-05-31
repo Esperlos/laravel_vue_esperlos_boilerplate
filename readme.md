@@ -47,6 +47,8 @@ then:
 php artisan key:generate
 ```
 
+then you can  set db configs, set migrations and so on ...
+
 # Running
 
 ```
