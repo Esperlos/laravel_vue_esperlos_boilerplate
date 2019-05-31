@@ -125,3 +125,38 @@ body:
 	"offset":"0"
 }
 ```
+
+# CedarMapHelper
+
+import:
+```php
+use App\Http\Helpers\CedarMapHelper;
+```
+usage:
+```php
+$directionsData = CedarMapHelper::getDirectionsData(
+    (object) ['latitude' => $request->get('start_lat'), 'longitude' => $request->get('start_lng')],
+    (object) ['latitude' => $request->get('end_lat'), 'longitude' => $request->get('end_lng')]
+);
+```
+
+# FirebaseHelper
+
+import:
+```php
+use App\Http\Helpers\FirebaseHelper;
+```
+usage:
+```php
+FirebaseHelper::sendFcmNotificationMessage($pushTokenArray, $data, 'Text');
+```
+# SmsPanelHelper
+
+import:
+```php
+use App\Http\Helpers\SmsPanelHelper;
+```
+usage:
+```php
+SmsPanelHelper::sendSms($phoneNumber), $tempCode);
+```
