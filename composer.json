@@ -48,7 +48,6 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "release",
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
