@@ -76,8 +76,52 @@ http://localhost:8000/
 default example routes for api:
 
 http://localhost:8000/api/v1/example/create-example-user
+
+body:
+```json
+{
+	"field_one":"Hello",
+	"field_two":"Word"
+}
+```
+
 http://localhost:8000/api/v1/example/edit-example-profile
+
+body:
+
+```json
+{
+	"api_token":"FLH7CMhUiDN54OkjFBxN1CeWnXIgjsJY36Gz3lCy7IEia81MO5lG9UW7efGK",
+		"field_one":"Hello",
+	"field_two":"Sajjad"
+
+}
+```
+
 http://localhost:8000/api/v1/example/get-example
+
+
+body:
+
+
+```json
+{
+	"api_token":"FLH7CMhUiDN54OkjFBxN1CeWnXIgjsJY36Gz3lCy7IEia81MO5lG9UW7efGK",
+		"field_one":"Hello",
+	"field_two":"Sajjad"
+
+}
+```
+
 http://localhost:8000/api/v1/example/get-examples-list
 
 
+body:
+
+
+```json
+{
+	"api_token":"FLH7CMhUiDN54OkjFBxN1CeWnXIgjsJY36Gz3lCy7IEia81MO5lG9UW7efGK",
+	"offset":"0"
+}
+```
