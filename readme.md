@@ -49,15 +49,6 @@ php artisan key:generate
 
 then you can  set db configs, set migrations and so on ...
 
-# Running
-
-```
-php artisan serve
-```
-
-```
-npm run watch
-```
 
 # Generating Controller
 
@@ -67,6 +58,15 @@ This command will generate a controller in app/http/controller/api/ folder
 php ControllerGenerator.php --name=ControllerName
 ```
 
+# Run
+
+```
+php artisan serve
+```
+
+```
+npm run watch
+```
 # Example Routes
 
 default example route for vue:
