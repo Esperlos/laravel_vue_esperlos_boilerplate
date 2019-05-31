@@ -1,5 +1,5 @@
 {
-    "name": "Esperlos/laravel_esperlos_boilerplate",
+    "name": "esperlos/laravel_esperlos_boilerplate",
     "type": "project",
     "description": "A boilerplate for laravel designed to use laravel as backend and vue as frontend plus some improvements.",
     "keywords": [
