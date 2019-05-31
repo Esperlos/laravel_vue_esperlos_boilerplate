@@ -32,19 +32,9 @@
 # Setup
 
 ```
-git clone --depth=1 --branch=master https://github.com/Esperlos/laravel_esperlos_boilerplate.git ProjectName
-rm -rf ./ProjectName/.git
+composer create-project --prefer-dist esperlos/laravel_esperlos_boilerplate ProjectName
 cd ProjectName
-composer install
 npm install
-```
-
-Copy .env.example file and remove .example suffix
- 
-then:
-
-```
-php artisan key:generate
 ```
 
 then you can  set db configs, set migrations and so on ...
