@@ -130,11 +130,11 @@ Body:
 
 This helper checks for valid input from user
 
-First parameter is just Request that you receive from controller function.
+-First parameter is just Request that you receive from controller function.
 
-Second parameter is an array of request parameters that you want to check.
+-Second parameter is an array of request parameters that you want to check.
 
-Last parameter is a callback function with Response parameter this function will be called when checks are passed.
+-Last parameter is a callback function with Response parameter this function will be called when checks are passed.
 
 Import:
 ```php
@@ -170,9 +170,11 @@ InputHelper::inputChecker(
 
 This helper helps you to provide an integrated json response for all apis
 
-First parameter is error message, if you don't have any errors you can set null value for it.
-Second parameter is Http Response code.
-Last parameter is data that you want send to user. it can be an array or object or even a string.
+-First parameter is error message, if you don't have any errors you can set null value for it.
+
+-Second parameter is Http Response code.
+
+-Last parameter is data that you want send to user. it can be an array or object or even a string.
 
 Import:
 ```php
