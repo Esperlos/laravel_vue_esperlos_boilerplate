@@ -1876,6 +1876,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "info-card",
   props: ['title', 'image']
@@ -1892,6 +1897,31 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -38052,7 +38082,6 @@ var render = function() {
     [
       _c(
         "v-flex",
-        { attrs: { md10: "", sm6: "", "offset-sm3": "" } },
         [
           _c(
             "v-card",
@@ -38062,12 +38091,7 @@ var render = function() {
                 { attrs: { "primary-title": "" } },
                 [
                   _c("v-img", {
-                    attrs: {
-                      height: "300px",
-                      width: "300px",
-                      "lazy-src": _vm.image,
-                      src: _vm.image
-                    },
+                    attrs: { height: "400px", width: "400px", src: _vm.image },
                     scopedSlots: _vm._u([
                       {
                         key: "placeholder",
@@ -38142,31 +38166,78 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("h1", [_vm._v("Vue Router Demo App")]),
-    _vm._v(" "),
-    _c(
-      "p",
-      [
-        _c("router-link", { attrs: { to: { name: "saji" } } }, [
-          _vm._v("Saji")
-        ]),
-        _vm._v(" |\n        "),
-        _c("router-link", { attrs: { to: { name: "moli" } } }, [
-          _vm._v("Moli")
-        ]),
-        _vm._v(" "),
-        _c("router-link", { attrs: { to: { name: "zizi" } } }, [
-          _vm._v("Zizi")
-        ]),
-        _vm._v(" |\n        "),
-        _c("router-link", { attrs: { to: { name: "kazi" } } }, [_vm._v("Kazi")])
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "container" }, [_c("router-view")], 1)
-  ])
+  return _c(
+    "v-app",
+    { attrs: { id: "inspire" } },
+    [
+      _c(
+        "v-container",
+        [
+          _c(
+            "v-layout",
+            [
+              _c(
+                "v-btn",
+                {
+                  attrs: {
+                    color: "#212121",
+                    flat: "",
+                    value: "saji",
+                    to: "/saji"
+                  }
+                },
+                [_c("span", [_vm._v("saji")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: {
+                    color: "#212121",
+                    flat: "",
+                    value: "moli",
+                    to: "/moli"
+                  }
+                },
+                [_c("span", [_vm._v("moli")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: {
+                    color: "#212121",
+                    flat: "",
+                    value: "zizi",
+                    to: "/zizi"
+                  }
+                },
+                [_c("span", [_vm._v("zizi")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: {
+                    color: "#212121",
+                    flat: "",
+                    value: "kazi",
+                    to: "/kazi"
+                  }
+                },
+                [_c("span", [_vm._v("kazi")])]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("router-view")
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -1,9 +1,13 @@
 <template>
     <v-layout>
-        <v-flex md10 sm6 offset-sm3>
+
+        <v-flex>
+
             <v-card>
+
                 <v-card-title primary-title>
-                    <v-img height="300px" width="300px" v-bind:lazy-src="image" v-bind:src="image">
+
+                    <v-img height="400px" width="400px" v-bind:src="image">
                         <template v-slot:placeholder>
                             <v-layout
                                     fill-height
@@ -19,6 +23,7 @@
                         {{title}}
                     </h3>
                 </v-card-title>
+
             </v-card>
         </v-flex>
     </v-layout>
@@ -27,7 +32,7 @@
 <script>
     export default {
         name: "info-card",
-        props:['title','image']
+        props: ['title', 'image']
     }
 </script>
 

@@ -23,7 +23,7 @@
 
 +ControllerGenerator to generate controllers with our pattern
 
-+Setup vue, vuex, vue router and other vue essential packages by default
++Setup vue, vuex, vue router, vuetify and other vue essential packages by default
 
 +Done some other customizes for easier use of Helpers
 

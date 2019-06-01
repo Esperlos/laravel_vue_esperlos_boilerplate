@@ -1,18 +1,43 @@
 <template>
-    <div class="container">
-        <h1>Vue Router Demo App</h1>
+    <v-app id="inspire">
 
-        <p>
-            <router-link :to="{ name: 'saji' }">Saji</router-link> |
-            <router-link :to="{ name: 'moli' }">Moli</router-link>
-            <router-link :to="{ name: 'zizi' }">Zizi</router-link> |
-            <router-link :to="{ name: 'kazi' }">Kazi</router-link>
-        </p>
-
-        <div class="container">
+        <v-container>
+            <v-layout>
+            <v-btn
+                    color="#212121"
+                    flat
+                    value="saji"
+                    to="/saji"
+            >
+                <span>saji</span>
+            </v-btn>
+            <v-btn
+                    color="#212121"
+                    flat
+                    value="moli"
+                    to="/moli"
+            >
+                <span>moli</span>
+            </v-btn>
+            <v-btn
+                    color="#212121"
+                    flat
+                    value="zizi"
+                    to="/zizi"
+            >
+                <span>zizi</span>
+            </v-btn> <v-btn
+                color="#212121"
+                flat
+                value="kazi"
+                to="/kazi"
+        >
+            <span>kazi</span>
+        </v-btn>
+            </v-layout>
             <router-view></router-view>
-        </div>
-    </div>
+        </v-container>
+    </v-app>
 </template>
 
 <script>
