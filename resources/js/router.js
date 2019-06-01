@@ -1,10 +1,10 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
-import IndexPage from "./components/Index.vue"
-import SajiPage from "./components/pages/saji.vue"
-import MoliPage from "./components/pages/moli.vue"
-import ZiziPage from "./components/pages/zizi.vue"
-import KaziPage from "./components/pages/kazi.vue"
+import IndexPage from "./containers/Index.vue"
+import SajiPage from "./containers/pages/saji.vue"
+import MoliPage from "./containers/pages/moli.vue"
+import ZiziPage from "./containers/pages/zizi.vue"
+import KaziPage from "./containers/pages/kazi.vue"
 
 Vue.use(VueRouter)
 
