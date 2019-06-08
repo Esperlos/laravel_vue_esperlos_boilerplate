@@ -3,6 +3,9 @@
 
 namespace App\Http\Helpers;
 
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Carbon;
+use Intervention\Image\Facades\Image;
 
 class UploadHelper
 {
